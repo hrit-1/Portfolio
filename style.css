@@ -265,6 +265,7 @@ section{
     border-radius: 3rem;
     cursor: pointer;
     transition: 0.3s ease-in-out;
+    overflow: hidden;
 }
 .project-card:hover{
     background-color: black;
@@ -272,9 +273,14 @@ section{
     transform: translateY(-10px)scale(1.02);
 }
 .project-card img{
-    width: 20vw;
+    width: 100%;
+    max-width: 300px;
+    height: 220px;
+    object-fit: contain;
     border-radius: 1rem;
+    display: block;
 }
+
 .project-card:hover .btn{
     border: 2px solid white;
     color: white;
@@ -417,7 +423,32 @@ footer ul li a{
     max-height: none;
     object-fit: cover;
 }
+
+
+    .experience {
+        height: auto !important;
+        min-height: auto !important;
+        padding-bottom: 2rem !important;
+    }
+
+    .experience-info {
+        height: auto !important;
+        min-height: auto !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .experience-info > img {
+        width: 250px !important;
+        height: auto !important;
+        max-width: 250px !important;
+        margin: 2rem auto !important;
+        display: block;
+        object-fit: contain;
+    }
 }
+
 
 
 @media(max-width:600px){
@@ -488,5 +519,34 @@ footer ul li a{
     object-fit: cover;
     }
 
+    .project-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
 }
+
+.project-card {
+    padding: 2rem 1rem;
+    width: 100%;
+}
+
+.project-card img {
+    width: 100%;
+    max-width: 280px;
+    height: 200px;
+    object-fit: contain;
+}
+
+
+
+    .experience-info > img {
+        width: 220px !important;
+        max-width: 220px !important;
+        height: auto !important;
+        display: block;
+        margin: 1rem auto !important;
+        object-fit: contain;
+    }
+}
+
+
 
